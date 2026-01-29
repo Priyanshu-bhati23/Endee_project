@@ -1,0 +1,7 @@
+streamlit
+requests
+python-dotenv
+tqdm
+langchain-openai
+endee
+pypdf
