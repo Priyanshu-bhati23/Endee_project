@@ -3,16 +3,14 @@
 from PyPDF2 import PdfReader
 
 def chunk_text(text, chunk_size=500, overlap=50):
-    """
-    Split text into chunks of chunk_size with overlap.
-    """
     chunks = []
     start = 0
     while start < len(text):
         end = start + chunk_size
         chunks.append(text[start:end])
-        start += chunk_size - overlap
+        start = end - overlap
     return chunks
+
 
 def parse_pdf(file_path):
     """
