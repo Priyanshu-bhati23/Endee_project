@@ -1,8 +1,10 @@
 from endee import Endee
+import os
 
+ENDEE_URL = os.getenv("ENDEE_URL")
 # Connect to Endee server
 client = Endee()
-client.set_base_url("http://endee:8080/api/v1")
+client.set_base_url("ENDEE_URL")
 
 # List all existing indexes
 existing_indexes = client.list_indexes()

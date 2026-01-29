@@ -6,9 +6,12 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 load_dotenv()
 
 INDEX_NAME = "finance"
+ENDEE_URL = os.getenv("ENDEE_URL")
+
+
 
 client = Endee()
-client.set_base_url("http://endee:8080/api/v1")
+client.set_base_url("ENDEE_URL")
 
 embeddings = OpenAIEmbeddings(
     model="text-embedding-3-small",

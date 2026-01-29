@@ -13,11 +13,12 @@ load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 FINNHUB_API_KEY = os.getenv("FINNHUB_API_KEY")
+ENDEE_URL = os.getenv("ENDEE_URL")
 
 INDEX_NAME = "finance"
 
 client = Endee()
-client.set_base_url("http://endee:8080/api/v1")
+client.set_base_url("ENDEE_URL")
 
 embeddings = OpenAIEmbeddings(
     model="text-embedding-3-small",

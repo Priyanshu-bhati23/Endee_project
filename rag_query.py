@@ -11,13 +11,14 @@ from utils import chunk_text, parse_pdf
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 FINNHUB_API_KEY = os.getenv("FINNHUB_API_KEY")
+ENDEE_URL = os.getenv("ENDEE_URL")
 
 if not OPENAI_API_KEY or not FINNHUB_API_KEY:
     raise ValueError("Missing OpenAI or Finnhub API key in .env")
 
 # Endee client
 client = Endee()
-client.set_base_url("http://endee:8080/api/v1")
+client.set_base_url("ENDEE_URL")
 INDEX_NAME = "finance_docs"
 
 # Initialize embeddings
