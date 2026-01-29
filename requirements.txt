@@ -1,9 +1,7 @@
 streamlit
-yfinance
-openai
-langchain-openai
-endee
-python-dotenv
+requests
 tqdm
-streamlit-lottie
-pypdf
+python-dotenv
+PyPDF2
+endee
+langchain-openai
