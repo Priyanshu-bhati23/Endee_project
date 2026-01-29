@@ -8,7 +8,7 @@ load_dotenv()
 INDEX_NAME = "finance"
 
 client = Endee()
-client.set_base_url("http://localhost:8080/api/v1")
+client.set_base_url("http://endee:8080/api/v1")
 
 embeddings = OpenAIEmbeddings(
     model="text-embedding-3-small",

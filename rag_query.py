@@ -17,7 +17,7 @@ if not OPENAI_API_KEY or not FINNHUB_API_KEY:
 
 # Endee client
 client = Endee()
-client.set_base_url("http://localhost:8080/api/v1")
+client.set_base_url("http://endee:8080/api/v1")
 INDEX_NAME = "finance_docs"
 
 # Initialize embeddings
