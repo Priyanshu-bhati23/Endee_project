@@ -1,13 +1,14 @@
-version: '3.8'
+version: "3.8"
 
 services:
   endee:
-    image: endeeio/endee-server:latest
+    image: endee/vector-db:latest
     container_name: endee
     ports:
       - "8080:8080"
+    restart: unless-stopped
 
-  streamlit:
+  app:
     build: .
     container_name: finance-app
     ports:
@@ -15,5 +16,6 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - FINNHUB_API_KEY=${FINNHUB_API_KEY}
+      - ENDEE_URL=http://endee:8080/api/v1
     depends_on:
       - endee

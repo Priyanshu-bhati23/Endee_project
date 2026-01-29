@@ -6,3 +6,4 @@ endee
 python-dotenv
 tqdm
 streamlit-lottie
+pypdf
